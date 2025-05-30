@@ -12,7 +12,7 @@ export type IResources = {
     id: string
 }
 
-export interface IDBResource {
+export interface IResource {
     id: string
     name: string
     type: "folder" | "file"

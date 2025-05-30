@@ -62,3 +62,22 @@ export const RESOURCES = [
         url: "/resources/telecom"
     },
 ]
+
+export const LEVELS = [
+    { course: "computer", lvl: "100", id: "6792cb413373bb6d0f835075" },
+    { course: "computer", lvl: "200", id: "6792cb413373bb6d0f835075" },
+    { course: "computer", lvl: "300", id: "6792cb413373bb6d0f835075" },
+    { course: "computer", lvl: "400", id: "6792cb413373bb6d0f835075" },
+    { course: "biomed", lvl: "100", id: "6792cb413373bb6d0f835075" },
+    { course: "biomed", lvl: "200", id: "6792cb413373bb6d0f835075" },
+    { course: "biomed", lvl: "300", id: "6792cb413373bb6d0f835075" },
+    { course: "biomed", lvl: "400", id: "6792cb413373bb6d0f835075" },
+    { course: "electrical", lvl: "100", id: "6792cb413373bb6d0f835075" },
+    { course: "electrical", lvl: "200", id: "6792cb413373bb6d0f835075" },
+    { course: "electrical", lvl: "300", id: "6792cb413373bb6d0f835075" },
+    { course: "electrical", lvl: "400", id: "6792cb413373bb6d0f835075" },
+    { course: "telecom", lvl: "100", id: "6792cb413373bb6d0f835075" },
+    { course: "telecom", lvl: "200", id: "6792cb413373bb6d0f835075" },
+    { course: "telecom", lvl: "300", id: "6792cb413373bb6d0f835075" },
+    { course: "telecom", lvl: "400", id: "6792cb413373bb6d0f835075" },
+]
