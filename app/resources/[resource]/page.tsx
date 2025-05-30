@@ -68,7 +68,7 @@ export default async function Resource(props: IQuery) {
           <section className="w-full flex justify-center">
             <div className="w-full max-w-screen-xl py-28 px-10">
               <div className="w-full max-w-screen-lg my-0 mx-auto rounded-2xl border-2 border-[#37464F]">
-                <div className="px-7 py-5 border-b-2 border-[#37464F] flex items-center space-x-4">
+                <div className={cn("px-7 py-5 border-b-2 border-[#37464F] flex items-center space-x-4", !resources.length && "border-0")}>
                   <ActionLink 
                     icon={ArrowLeft} 
                     disable={!folder}
