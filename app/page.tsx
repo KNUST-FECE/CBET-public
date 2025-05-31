@@ -18,7 +18,7 @@ export default function Home() {
                 <Typewriter />
               </h1>
               <h1>
-                Engineering students.
+                Engineering.
               </h1>
             </div>
             <p className="font-inter font-normal text-xl max-sm:text-lg text-[#DCE6EC] max-w-screen-sm">
