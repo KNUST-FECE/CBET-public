@@ -124,7 +124,7 @@ function ActionLink(props: { icon: LucideIcon, url: string, disable?: boolean, d
 function ResourceCard({ id, name, type, folderCount, fileCount, fileUrl, url }: IResource & { url?: string }) {
   const isFile = type === "file";
   return (
-    <div className="px-7 max-sm:px-5 py-5 max-xs:py-3 max-xs:py-3 flex items-center max-md:items-start justify-between">
+    <div className="px-7 max-sm:px-5 py-5 max-xs:py-3 max-xs:px-3 flex items-center max-md:items-start justify-between">
       <div className="flex items-center max-md:items-start space-x-4">
         <div className="max-md:mt-2">
           {isFile ? <FileSvg /> : <FolderSvg />}
