@@ -44,7 +44,7 @@ export default function Home() {
                   </div>
                   <div>
                     <a href={item.url} className="font-inter uppercase text-[#FFFFFF] text-sm font-semibold flex items-center">
-                      view {item.name}
+                      view
                       <ChevronRight className="text-[#FFFFFF] ml-1 size-4"/>
                     </a>
                   </div>
