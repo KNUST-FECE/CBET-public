@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-visually-hidden": "^1.2.3",
     "@react-spring/web": "^10.0.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
@@ -20,6 +22,7 @@
     "react-hook-form": "^7.56.4",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
+    "typewriter-effect": "^2.22.0",
     "zod": "^3.25.34"
   },
   "devDependencies": {

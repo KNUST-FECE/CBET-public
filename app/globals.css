@@ -5,17 +5,6 @@
 :root {
   --foreground: #171717;
   --background: #131F24;
-  --border: #37464F;
-  --card-text1: #F1F7FB;
-  --card-text2: #DCE6EC;
-  --text-white: #FFFFFF;
-
-
-  --green-light: #58CC02;
-  --green-dark: #58CC02;
-
-  --blue-light: #3C4DFF;
-  --blue-dark: #3F22EC;
 }
 
 body {

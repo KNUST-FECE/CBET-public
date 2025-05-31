@@ -32,7 +32,7 @@ export const FEATURES = [
     },
     { 
         name: "blog", 
-        desc: "Stay connected with the latest news, events, and updates from across the department.", 
+        desc: "Stay connected with the latest news and events from across the department.", 
         svg: BlogSvg, 
         url: "/blog", 
         bg1: "#EB4335", 

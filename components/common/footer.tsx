@@ -5,10 +5,10 @@ export default function Footer() {
         <footer className="w-full flex items-center justify-center">
             <div className="w-full max-w-screen-xl px-10 py-6 flex justify-center">
                 <nav>
-                    <ul className="flex gap-7">
+                    <ul className="flex gap-7 max-md:gap-4">
                         {NAVLINKS.map(({name, url}) => (
                             <li key={name}>
-                            <a href={url} className="font-inter font-medium text-[#52656D] hover:text-[#DCE6EC] text-base capitalize">{name}</a>
+                            <a href={url} className="font-inter font-medium text-[#52656D] hover:text-[#DCE6EC] text-base max-lg:text-sm capitalize">{name}</a>
                             </li>
                         ))}
                     </ul>
