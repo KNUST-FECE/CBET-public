@@ -38,10 +38,10 @@ export default async function Resource(props: IQuery) {
         <main>
           {/* hero section */}
           <section className="w-full flex justify-center bg-[#202F36]">
-            <div className="w-full max-w-screen-xl py-28 px-10 space-y-10">
+            <div className="w-full max-w-screen-xl py-28 max-sm:py-16 max-xs:py-12 px-10 max-sm:p-5 space-y-10">
               <div className="space-y-3">
-                <h4 className="font-feather text-base font-semibold tracking-tight uppercase text-[#52656D]">resources</h4>
-                <h1 className="font-feather text-6xl text-[#FFFFFF]"> {courses[resource]} engineering.</h1>
+                <h4 className="font-inter text-lg max-sm:text-sm font-bold max-sm:font-semibold tracking-wide uppercase text-[#52656D]">resources</h4>
+                <h1 className="space-y-2 max-lg:space-y-1 font-feather text-6xl max-lg:text-5xl max-sm:text-4xl max-xs:text-3xl text-[#FFFFFF]"> {courses[resource]} engineering.</h1>
               </div>
               <nav>
                 <ul className="flex items-center space-x-4">
@@ -50,9 +50,9 @@ export default async function Resource(props: IQuery) {
                       <Link 
                         href={`/resources/${resource}?lvl=${item.lvl}`}
                         className={cn(
-                          "font-feather text-sm text-[#FFFFFF] space-x-1 flex px-4 py-2",
-                          "rounded-xl border-2 border-[#37464F] shadow-[0_3px_0_0_#37464F] active:shadow-none active:translate-y-[3px] transition-all duration-100", 
-                          item.lvl === lvl && "bg-[#5acc0217] text-[#58CC02] border-[#58CC02] shadow-[#58CC02]",
+                          "font-feather text-sm text-[#FFFFFF] gap-1 max-xs:gap-0 flex max-xs:flex-col items-center px-4 py-2",
+                          "rounded-xl border-2 border-[#37464F] shadow-[0_3px_0_0_#37464F] active:shadow-none active:translate-y-[3px] transition-all duration-100 hover:bg-[#131F24]", 
+                          item.lvl === lvl && "text-[#58CC02] border-[#58CC02] shadow-[#58CC02]",
                         )}
                       >
                         <span>lvl</span>
@@ -66,9 +66,9 @@ export default async function Resource(props: IQuery) {
           </section>
           {/* title section */}
           <section className="w-full flex justify-center">
-            <div className="w-full max-w-screen-xl py-28 px-10">
+            <div className="w-full max-w-screen-xl py-28 max-sm:py-16 max-xs:py-12 px-10 max-sm:px-5">
               <div className="w-full max-w-screen-lg my-0 mx-auto rounded-2xl border-2 border-[#37464F]">
-                <div className={cn("px-7 py-5 border-b-2 border-[#37464F] flex items-center space-x-4", !resources.length && "border-0")}>
+                <div className={cn("px-7 max-sm:px-5 py-5 border-b-2 border-[#37464F] flex items-center space-x-4", !resources.length && "border-0")}>
                   <ActionLink 
                     icon={ArrowLeft} 
                     disable={!folder}
@@ -124,10 +124,12 @@ function ActionLink(props: { icon: LucideIcon, url: string, disable?: boolean, d
 function ResourceCard({ id, name, type, folderCount, fileCount, fileUrl, url }: IResource & { url?: string }) {
   const isFile = type === "file";
   return (
-    <div className="px-7 py-5 flex items-center justify-between">
-      <div className="flex items-center space-x-4">
-        {isFile ? <FileSvg /> : <FolderSvg />}
-        <div className="flex items-center space-x-7">
+    <div className="px-7 max-sm:px-5 py-5 max-xs:py-3 max-xs:py-3 flex items-center max-md:items-start justify-between">
+      <div className="flex items-center max-md:items-start space-x-4">
+        <div className="max-md:mt-2">
+          {isFile ? <FileSvg /> : <FolderSvg />}
+        </div>
+        <div className="flex max-md:flex-col items-center max-md:items-start max-md:justify-start gap-7 max-md:gap-0">
           <h4 className="font-feather text-base text-[#DCE6EC] capitalize">{name}</h4>
           {!isFile && (
             <div className="flex items-center">
@@ -138,11 +140,13 @@ function ResourceCard({ id, name, type, folderCount, fileCount, fileUrl, url }: 
           )}
         </div>
       </div>
-      {isFile ? (
-        <ActionLink url={fileUrl as string} icon={Download} download target="_blank" />
-      ) : (
-        <ActionLink url={`${url}&folder=${id}`} icon={ArrowRight} />
-      )}
+      <div>
+        {isFile ? (
+          <ActionLink url={fileUrl as string} icon={Download} download target="_blank" />
+        ) : (
+          <ActionLink url={`${url}&folder=${id}`} icon={ArrowRight} />
+        )}
+      </div>
     </div>
   );
 }
