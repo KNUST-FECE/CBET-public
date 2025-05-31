@@ -21,15 +21,15 @@ export default function Resources() {
       <main>
         <FeatureHero feature="resources" desc="Access a growing library of lecture notes and academic resources." />
         <section className="w-full flex justify-center">
-          <div className="w-full max-w-screen-xl py-28 px-10">
-            <ul className="w-full flex justify-between space-x-5">
+          <div className="w-full max-w-screen-xl py-28 max-sm:py-16 max-xs:py-12 px-10 max-sm:px-5">
+            <ul className="w-full grid grid-cols-4 max-xl:grid-cols-2 max-md:grid-cols-1 gap-5 max-sm:gap-8">
               {RESOURCES.map((item) => (
                 <li key={item.name} className="w-full rounded-2xl bg-[#202F36] border-2 border-[#37464F] shadow-[0_4px_0_0_#37464F] p-8 space-y-7">
                   <item.svg />
                   <h3>
                     <Link href={item.url} className="font-feather text-xl text-[#FFFFFF] hover:underline">{item.name}</Link>
                   </h3>
-                  <ul className="space-y-4">
+                  <ul className="grid max-xl:grid-cols-2 max-sm:grid-cols-1 gap-4">
                     {levels.map((lvl) => (
                       <li key={lvl}>
                         <Link href={`${item.url}?lvl=${lvl}`} className="group flex justify-between items-center">

@@ -11,9 +11,9 @@ export default function Home() {
       <Header />
       <main>
         <section className="w-full flex justify-center bg-[#202F36]">
-          <div className="w-full max-w-screen-xl py-28 max-sm:py-16 px-10 max-sm:p-5 space-y-6 max-xl:space-y-5">
+          <div className="w-full max-w-screen-xl py-28 max-sm:py-16 max-xs:py-12 px-10 max-sm:p-5 space-y-6 max-xl:space-y-5">
             <h4 className="font-inter text-lg max-sm:text-sm font-bold max-sm:font-semibold tracking-wide uppercase text-[#52656D]">an online platform for</h4>
-            <div className="space-y-2 max-lg:space-y-1 font-feather text-6xl max-lg:text-5xl max-sm:text-4xl text-[#FFFFFF] ">
+            <div className="space-y-2 max-lg:space-y-1 font-feather text-6xl max-lg:text-5xl max-sm:text-4xl max-xs:text-3xl text-[#FFFFFF]">
               <h1 className="space-x-6">
                 <Typewriter />
               </h1>
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full flex justify-center">
-          <div className="w-full max-w-screen-xl py-28 max-sm:py-20 px-10 max-sm:px-5">
+          <div className="w-full max-w-screen-xl py-28 max-sm:py-16 max-xs:py-12 px-10 max-sm:px-5">
             <ul className="w-full grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-7">
               {FEATURES.map((item) => (
                 <li 
