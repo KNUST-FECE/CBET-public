@@ -16,7 +16,7 @@ export const NAVLINKS = [
 export const FEATURES = [
     { 
         name: "resources", 
-        desc: "Access a growing library of lecture notes and academic resources.", 
+        desc: "Access a growing library of lecture notes and academic resources.",
         svg: ResourceSvg, 
         url: "/resources", 
         bg1: "#58A700", 
@@ -43,22 +43,22 @@ export const FEATURES = [
 export const RESOURCES = [
     {
         name: "computer",
-        svg: ComputerSvg,
+        img: "/aces.jpg",
         url: "/resources/computer"
     },
     {
         name: "biomed",
-        svg: BiomedSvg,
+        img: "/bess.jpg",
         url: "/resources/biomed"
     },
     {
         name: "electrical",
-        svg: ElectricalSvg,
+        img: "/eleesa.jpg",
         url: "/resources/electrical"
     },
     {
         name: "telecom",
-        svg: TelecomSvg,
+        img: "/tesa.jpg",
         url: "/resources/telecom"
     },
 ]

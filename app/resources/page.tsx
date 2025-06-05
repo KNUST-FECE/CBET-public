@@ -5,6 +5,7 @@ import CircleCheckSvg from "@/components/svgs/circle-check-svg";
 import { RESOURCES } from "@/lib/constants";
 import { ChevronRight } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function Resources() {
             <ul className="w-full grid grid-cols-4 max-xl:grid-cols-2 max-md:grid-cols-1 gap-5 max-sm:gap-8">
               {RESOURCES.map((item) => (
                 <li key={item.name} className="w-full rounded-2xl bg-[#202F36] border-2 border-[#37464F] shadow-[0_4px_0_0_#37464F] p-8 space-y-7">
-                  <item.svg />
+                  <Image src={item.img} alt={item.name} height={64} width={64} className="rounded-xl" />
                   <h3>
                     <Link href={item.url} className="font-feather text-xl text-[#FFFFFF] hover:underline">{item.name}</Link>
                   </h3>

@@ -3,13 +3,14 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./sheet";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import Image from "next/image";
 
 export default function Header() {
     return (
         <header className="w-full flex items-center justify-center bg-[#202F36]">
             <div className="w-full max-w-screen-xl flex items-center justify-between py-6 px-10 max-sm:px-5">
                 <div>
-                    <h1 className="font-feather text-[#FFFFFF] text-4xl">cbet</h1>
+                    <Image src="/fesa.jpg" alt="logo" height={36} width={36} className="rounded-lg" />
                 </div>
                 <nav className="max-md:hidden">
                     <ul className="flex gap-7">
