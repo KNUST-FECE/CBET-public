@@ -8,9 +8,9 @@ import Image from "next/image";
 export default function Header() {
     return (
         <header className="w-full flex items-center justify-center bg-[#202F36]">
-            <div className="w-full max-w-screen-xl flex items-center justify-between py-6 px-10 max-sm:px-5">
+            <div className="w-full max-w-screen-xl flex items-center justify-between py-4 px-10 max-sm:px-5">
                 <div>
-                    <Image src="/fesa.jpg" alt="logo" height={36} width={36} className="rounded-lg" />
+                    <Image src="/fesa.png" alt="logo" height={72} width={72} />
                 </div>
                 <nav className="max-md:hidden">
                     <ul className="flex gap-7">

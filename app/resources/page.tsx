@@ -3,7 +3,7 @@ import Footer from "@/components/common/footer";
 import Header from "@/components/common/header";
 import CircleCheckSvg from "@/components/svgs/circle-check-svg";
 import { RESOURCES } from "@/lib/constants";
-import { ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,15 +30,15 @@ export default function Resources() {
                   <h3>
                     <Link href={item.url} className="font-feather text-xl text-[#FFFFFF] hover:underline">{item.name}</Link>
                   </h3>
-                  <ul className="grid max-xl:grid-cols-2 max-sm:grid-cols-1 gap-4">
+                  <ul className="grid max-md:grid-cols-2 gap-4">
                     {levels.map((lvl) => (
                       <li key={lvl}>
-                        <Link href={`${item.url}?lvl=${lvl}`} className="group flex justify-between items-center">
-                          <div className="flex space-x-4">
-                            <CircleCheckSvg className="size-6"/>
-                            <span className="font-inter font-semibold capitalize tracking-wide text-base text-[#DCE6EC] group-hover:underline">Level {lvl}</span>
-                          </div>
-                          <ChevronRight className="size-4 stroke-1 text-[#DCE6EC] opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100"/>
+                        <Link href={`${item.url}?lvl=${lvl}`} className="group flex items-center space-x-3">
+                          <CircleCheckSvg className="size-6"/>
+                          <p className="flex items-center justify-between flex-1 hover:underline">
+                            <span className="font-inter font-semibold tracking-wide text-base text-[#DCE6EC]">level {lvl}</span>
+                            <ArrowUpRight className="size-4 stroke-1 text-[#DCE6EC] opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-100"/>
+                          </p>
                         </Link>
                       </li>
                     ))}
